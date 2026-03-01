@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 12%, 93%);
+}
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  background-color: #eaeaea75;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-item i {
+  font-size: 35px;
+}
+
+.nav-item span {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.nav-item.active {
+  background-color: #9f9f9f;
+  color: white;
+}
+
+.nav-item.active i {
+  color: white;
+}
+.content-area {
+  margin: 10px 130px;
+  padding: 10px;
+  max-width: 1200px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+}
+
+.parent div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.parent div:hover {
+  transform: scale(1.03);
+}
+
+.div1 {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-image: url("https://img-eshop.cdn.nintendo.net/i/f43ebd5cdac98ed79b9e15c399b87e2c0d354757906f90eb3bd02aa01edc01e8.jpg");
+}
+
+.div2 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/7/74/Pokemon_Duel.png");
+}
+
+.div3 {
+  grid-column: 1;
+  grid-row: 3;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTEIrvbyePbTea_MX0OlqjQ5-OFkXZfEluPQ&s");
+}
+
+.div4 {
+  grid-column: 2;
+  grid-row: 3;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIL6B4XlIug4RqWEVPimEe2OwoYBJmJ8rZfg&s");
+}
+
+.div5 {
+  grid-column: 3;
+  grid-row: 3;
+  background-image: url("https://sm.ign.com/ign_pk/cover/p/pokemon-po/pokemon-pokopia_nmd2.jpg");
+}
+
+.div6 {
+  grid-column: 1 / span 3;
+  grid-row: 4;
+  background-image: url("https://wallpapers.com/images/hd/all-pokemon-pictures-rgz5xa5m4wqpae4s.jpg");
+}
+.slider {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.2s ease-in-out;
+}
+
+.slides img {
+  width: 80%;
+  height: 50%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.content-area {
+  max-width: 1200px;
+  margin: 20px 120px;
+  padding: 20px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-areas:
+    "yellow blue purple"
+    "green red brown"
+    "orange orange orange";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.box {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.03);
+}
+
+/* Grid area assignments */
+.yellow {
+  grid-area: yellow;
+}
+.blue {
+  grid-area: blue;
+}
+.purple {
+  grid-area: purple;
+}
+.green {
+  grid-area: green;
+}
+.red {
+  grid-area: red;
+}
+.brown {
+  grid-area: brown;
+}
+.orange {
+  grid-area: orange;
+}
+
+.pokemon-footer {
+  background-color: #000000d9;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-logo {
+  flex: 1 1 250px;
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  flex: 1 1 200px;
+}
+
+.footer-links h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  flex: 1 1 200px;
+}
+
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #ffcb05;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #ddd;
+}
